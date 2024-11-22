@@ -2,14 +2,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Venta {
-    private int idVenta;
-    private ArrayList<Producto> productosVendidos;
+    private final int idVenta;
+    private ArrayList<Producto> productosVendidos = new ArrayList<>();
     private double totalVenta;
     private LocalDateTime fechaHora;
 
     public Venta(int idVenta) {
         this.idVenta = idVenta;
-        this.productosVendidos = new ArrayList<>();
         this.totalVenta = 0.0;
         this.fechaHora = LocalDateTime.now();
     }
